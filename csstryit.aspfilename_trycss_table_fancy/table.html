@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+ 
+  border-collapse: collapse;
+  width: 100%;
+  /* margin-right: 3px; */
+    font-family: "Font Awesome 6 Free";
+    content: '\f105';
+    /* font-weight: bold; */
+
+
+
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+/* #customers tr:hover {background-color: #ddd;} */
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+a.btn {
+    text-decoration: none;
+}
+.btn-sm {
+    border-radius: var(--vk-size-radius-sm);
+}
+
+
+.btn-sm {
+    padding: 0.25rem 1rem;
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn {
+    white-space: inherit;
+}
+.btn-like a {
+    text-decoration: none;
+    border: 1px solid var(--vk-color-primary);
+    color: var(--vk-color-primary);
+    border-radius: 0.25em;
+    padding: 0.2em 0.5em;
+    font-size: 0.85em;
+}
+
+.btn-like a:hover {
+    background-color: var(--vk-color-primary);
+    color: #fff;
+}
+
+.btn-like a::before {
+    margin-right: 3px;
+    font-family: "Font Awesome 6 Free";
+    content: '\f105';
+    font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<table id="customers">
+  <tr>
+    <th>項目</th>
+    <th>サービス内容</th>
+    <th>価格</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle;">基本情報</td>
+    <td>管理者、オーナー、ユーザーと3つのログイン情報を持たせ、本格的なECサイトをつくってみよう</td>
+    <td>搭載している認証</td>
+  </tr>
+  <tr>
+    <td><a class="btn btn-outline-primary btn-sm" href="" target="_blank" rel="noreferrer noopener">スキルレベル</a></td>
+    <td>しまむら</td>
+    <td>スズキ</td>
+  </tr>
+  <tr>
+    <td><a class="btn btn-outline-primary btn-sm" href="" target="_blank" rel="noreferrer noopener">受講生</a></td>
+    <td>しまむら</td>
+    <td>スズキ</td>
+  </tr>
+  
+  <tr>
+    <td>福島</td>
+    <td>Laravelが搭載している認証</td>
+    <td>スキルレベル</td>
+  </tr>
+  <tr>
+    <td>本格的なECサイト</td>
+    <td>画像アップロード</td>
+    <td>画像アップロード</td>
+  </tr>
+  
+</table>
+
+</body>
+</html>
