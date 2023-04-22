@@ -1,18 +1,94 @@
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<input type="checkbox" name="check-kiy" id="btn-check-kiy">
+
+<button id="nice">いいね！</button>
 <figure class="wp-block-table">
-    <table>
+    <table >
     <tbody>
+
       <tr>  
         <th>名前</th>
         <th>住所</th>
         <th>電話番号</th>
 
       </tr>
-    
       <tr><td><a class="btn btn-outline-primary btn-sm" href="" target="_blank" rel="noreferrer noopener">ウェブサイト</a></td><td>千葉県松戸千葉県松戸</td><td>094464464664</td></tr>
-      <tr><td>ナカムラ</td><td>IAMユーザを作成しアクセスキーを使用します。</td><td>IAMユーザを作成しアクセス</td></tr>
+      <tr><td>ナカムラ1</td><td>IAMユーザを作成しアクセスキーを使用します。1</td><td>IAMユーザを作成しアクセス</td></tr>
+      <tr><td>ナカムラ2</td><td>IAMユーザを作成しアクセスキーを使用します。2</td><td>IAMユーザを作成しアクセス</td></tr>
+      <tr><td>ナカムラ3</td><td>IAMユーザを作成しアクセスキーを使用します。3</td><td>IAMユーザを作成しアクセス</td></tr>
     </tbody>
 </table>
+
+<input type="submit" class="submit_btn" disabled name="submit" id="submit" value="Send" />
 </figure>
+
+
+
+
+
+
+<script>
+
+// $(function(){
+//   $("#btn-check-kiy").click(function() {
+//     $("tr:last-child").css("background-color", "red");
+//   });
+// });
+document.getElementById("nice").addEventListener("click", function() {
+	// pタグを準備
+	var element = document.createElement("p");
+	// 「いいね!」というテキストを準備
+	var text = document.createTextNode("いいね！");
+	// pタグの中に「いいね!」を格納して要素を追加
+	document.body.appendChild(element).appendChild(text);
+});
+
+// document.getElementById("btn-check-kiy").addEventListener("click",function(){
+//     var rows = document.getElementsByTagName("tr");
+//     var lastRow = rows[rows.length - 1];
+//     lastRow.style.backgroundColor = "blue";
+
+    // var table = document.getElementById("btn-check-kiy");
+    // var lastRow = table.lastChild;
+    // while(lastRow.nodeType == Node.ELEMENT_NODE || lastRow.tagName.toLowerCase() !== 'tr'){
+    //     lastRow = lastRow.previousSibling;
+    //     if (!lastRow) {
+    //         break;
+    //     }
+    // }
+    // if(lastRow){
+    //     lastRow.style.backgroundColor = "pink";
+    // }
+
+//     element.classList.toggle("item"); 
+
+// });
+
+
+document.getElementById("btn-check-kiy").addEventListener("click", function() {
+    var rows = document.getElementsByTagName("tr");
+    var lastRow = null;
+    for (var i = rows.length - 1; i >= 0; i--) {
+        if (rows[i].nodeName.toLowerCase() === "tr") {
+            lastRow = rows[i];
+            break;
+        }
+    }
+    if (lastRow) {
+        lastRow.classList.toggle("item");
+    }
+});
+
+
+document.getElementById("btn-check-kiy").addEventListener("click", function() {
+    var submitBtn = document.getElementById("submit");
+    submitBtn.classList.toggle("open");
+});
+</script>
+
 
 <style>
 .btn:not(:disabled):not(.disabled) {
@@ -75,5 +151,19 @@ a.btn {
     font-weight: bold;
 }
 
+.submit_btn {
+    text-decoration: none;
+    border: 1px solid var(--vk-color-primary);
+    color: var(--vk-color-primary);
+    border-radius: 0.25em;
+    padding: 0.2em 0.5em;
+    font-size: 0.85em;
+    width: 200px;
+    height: 50px;
+}
+
+input.open{
+    background-color: #007bff;
+}
 
 </style>
