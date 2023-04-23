@@ -1,0 +1,58 @@
+JavaScriptにおいて、3つの異なる方法でイベントリスナーを設定できます。
+
+名前付き関数を使用する方法：
+function sampleEvent() {
+  // 処理を記述する
+}
+document.querySelector('#element').addEventListener('click', sampleEvent);
+
+無名関数を使用する方法：
+document.querySelector('#element').addEventListener('click', function() {
+  // 処理を記述する
+});
+
+アロー関数を使用する方法：
+document.querySelector('#element').addEventListener('click', () => {
+  // 処理を記述する
+});
+
+すべての方法で、イベントリスナーは指定された要素に対して指定された種類のイベントが発生した場合に、関数内の処理を実行します。
+
+
+
+3方法それぞれ例を書いてください
+はい、以下にそれぞれの方法の例を示します。
+
+名前付き関数を使用する方法：
+
+<button id="my-button">クリックする</button>
+
+<script>
+  function handleClick() {
+    console.log('ボタンがクリックされました');
+  }
+
+  document.getElementById('my-button').addEventListener('click', handleClick);
+</script>
+
+
+無名関数を使用する方法：
+
+<button id="my-button">クリックする</button>
+
+<script>
+  document.getElementById('my-button').addEventListener('click', function() {
+    console.log('ボタンがクリックされました');
+  });
+</script>
+
+
+アロー関数を使用する方法：
+
+<button id="my-button">クリックする</button>
+
+<script>
+  document.getElementById('my-button').addEventListener('click', () => {
+    console.log('ボタンがクリックされました');
+  });
+</script>

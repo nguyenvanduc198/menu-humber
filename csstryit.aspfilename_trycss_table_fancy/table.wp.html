@@ -22,7 +22,7 @@
     </tbody>
 </table>
 
-<input type="submit" class="submit_btn" disabled name="submit" id="submit" value="Send" />
+<input type="submit" class="submit_btn" disabled name="submit-data" id="submit" value="Send" />
 </figure>
 
 
@@ -83,10 +83,18 @@ document.getElementById("btn-check-kiy").addEventListener("click", function() {
 });
 
 
+
 document.getElementById("btn-check-kiy").addEventListener("click", function() {
-    var submitBtn = document.getElementById("submit");
+    var submitBtn = document.getElementsByName("submit-data")[0];
     submitBtn.classList.toggle("open");
 });
+
+
+
+// document.getElementById("btn-check-kiy").addEventListener("click", function() {
+//     var submitBtn = document.getElementById("submit");
+//     submitBtn.classList.toggle("open");
+// });
 </script>
 
 
@@ -167,3 +175,13 @@ input.open{
 }
 
 </style>
+
+<button id="my-button">クリックする</button>
+
+<script>
+  function handleClick() {
+    console.log('ボタンがクリックされました');
+  }
+
+  document.getElementById('my-button').addEventListener('click', handleClick);
+</script>
