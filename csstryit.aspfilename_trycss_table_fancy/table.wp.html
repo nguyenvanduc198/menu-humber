@@ -4,7 +4,11 @@
 
 <input type="checkbox" name="check-kiy" id="btn-check-kiy">
 
+<input type="submit" value="送信" class="btn-sumit-sou" id="btn-sumit-sou">
+
 <button id="nice">いいね！</button>
+
+<button id="btn-sumit-sousin">ダウンロード</button>
 <figure class="wp-block-table">
     <table >
     <tbody>
@@ -98,6 +102,48 @@ document.getElementById("btn-check-kiy").addEventListener("click", function() {
 </script>
 
 
+
+
+<script>
+  "use strict";
+  document.getElementById("btn-sumit-sousin").addEventListener("click", function() {
+    var link = document.createElement('a');
+    link.setAttribute('href', 'http://13.114.243.38/wp-content/uploads/2023/04/Huong-dan-su-dung.txt');
+    link.setAttribute('download', 'Huong-dan-su-dung.txt');
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+</script>
+
+<script>
+// (function() {
+//     "use strict";
+//     document.getElementById("btn-sumit-sou").addEventListener("click", function() {
+//       parent.location.href = "http://13.114.243.38/wp-content/uploads/2023/04/Huong-dan-su-dung.txt";
+//       parent.location.download = "Huong-dan-su-dung.txt";
+//     });
+//   })();
+
+
+(function() {
+  "use strict";
+  document.getElementById("btn-sumit-sou").addEventListener("click", function() {
+var link = document.createElement('a');
+  link.setAttribute('href', 'http://13.114.243.38/wp-content/uploads/2023/04/Huong-dan-su-dung.txt');
+  link.setAttribute('download', 'Huong-dan-su-dung.txt');
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link); });
+})();
+
+
+
+</script>
+
+
 <style>
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
@@ -176,12 +222,3 @@ input.open{
 
 </style>
 
-<button id="my-button">クリックする</button>
-
-<script>
-  function handleClick() {
-    console.log('ボタンがクリックされました');
-  }
-
-  document.getElementById('my-button').addEventListener('click', handleClick);
-</script>
