@@ -139,9 +139,27 @@ var link = document.createElement('a');
   document.body.removeChild(link); });
 })();
 
-
+(function() {
+document.getElementById("btn-sumit-sou").addEventListener("click", function() {
+    var submitBtn = document.getElementsByName("submit-data")[0];
+    submitBtn.classList.toggle("close");
+});
+})();
 
 </script>
+
+
+
+"use strict";
+document.getElementById("btn-sumit-sousin").addEventListener("click", function() {
+  var link = document.createElement('a');
+  link.setAttribute('href', 'http://13.114.243.38/wp-content/uploads/2023/04/Huong-dan-su-dung.txt');
+  link.setAttribute('download', 'Huong-dan-su-dung.txt');
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
 
 
 <style>
