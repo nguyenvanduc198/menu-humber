@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</test>
+</head>
+   
+<body>
+    <input type="submit" value="送信" class="btn-sumit-sou" id="btn-sumit-sou">
+
+    <!-- Add a container element for the dynamically created p tag -->
+    <div id="container"></div>
+
+    
+    <script>
+    const button = document.getElementById("btn-sumit-sou");
+    const container = document.getElementById("container");
+    
+    // Add click event listener to the button
+    button.addEventListener("click", function(event) {
+      // Prevent the form from submitting
+      event.preventDefault();
+      
+      // Create a new p tag
+      const pTag = document.createElement("p");
+      
+      // Set the text content of the p tag
+      pTag.textContent = "New paragraph created!";
+      
+      // Append the p tag to the container element
+      container.appendChild(pTag);
+    });
+    
+    // Add mouseover event listener to the button
+    button.addEventListener("mouseover", function() {
+      // Redirect to a different link in a new tab
+      window.open("https:google.co.jp", "_blank");
+    });
+    </script>
+    
+</body>
+</html>
